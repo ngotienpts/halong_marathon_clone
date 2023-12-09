@@ -1,0 +1,336 @@
+#sub-menu-header{
+	background-color: #0045b7;
+	z-index: 0;
+	position: relative;
+}
+#sub-menu-header .logo {
+    padding: 20px 0;
+}
+#sub-menu-header .logo img{
+    width: 196px;
+}
+/* Light */
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: normal;
+	font-weight: 300;
+	src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url("../fonts/RobotoCondensed-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: italic;
+	font-weight: 300;
+	src: local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'), url("../fonts/RobotoCondensed-LightItalic.ttf") format("truetype");
+}
+
+/* Normal */
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url("../fonts/RobotoCondensed-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: italic;
+	font-weight: 400;
+	src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'), url("../fonts/RobotoCondensed-Italic.ttf") format("truetype");
+}
+
+/* Bold */
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: normal;
+	font-weight: 700;
+	src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url("../fonts/RobotoCondensed-Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Roboto Condensed";
+	font-style: italic;
+	font-weight: 700;
+	src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url("../fonts/RobotoCondensed-BoldItalic.ttf") format("truetype");
+}
+/*end import*/
+
+.race-news{
+	float:left;
+	width:100%;
+}
+.race-box{
+	width:71%; 
+	margin:0 auto;
+}
+.race-news a{
+	color: #fff;
+	font-weight:bold;
+	text-decoration: none;
+	font-size: 2vw;
+}
+.race-news .col1{ 
+	float: left;
+	width:50%;
+}
+.race-news .col2{ 
+	float:right;
+	width:50%;
+}
+.race-news .row1{
+	height: 23vw;
+	background-size: 100% 24vw !important
+}
+.race-news .row1 img{
+	width:100%;
+	height:182px;
+}
+.race-news .row2{
+	height: 31vw;
+	background-size: 100% 31vw !important
+}
+.race-news .block1{
+	margin-top: 17vw; 
+	margin-left:0;
+	text-align: left;
+}
+.race-news .block2{
+	margin-top: 25vw; 
+	margin-left:10px;
+	text-align: left;
+}
+.race-news .distance{
+	float:right;
+	border: solid 1px #fff;
+	padding: 5px 10px;
+	color:#fff;
+	font-weight:bold;
+	font-size:2vw;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+.race-news .row2 img{
+	width:100%;
+	height:280px;
+}
+.race-news table tr td{
+	padding: 5px;
+	margin: 5px;
+	display: block;
+}
+#videoImageGallery{
+	width:85%;
+	margin: 0 auto;
+}
+@media only screen and (min-width: 360px) and (max-width: 740px) {
+	.race-box{
+		width:90%; 
+		margin:0 auto;
+		overflow: hidden;
+	}
+	.race-news .block1{
+		margin-top: 15vw; 
+		margin-left:0;
+		text-align: left;
+	}
+	.race-news .block2{
+		margin-top: 23vw; 
+		margin-left:0;
+		text-align: left;
+	}
+	.race-news .distance{
+		margin-right: 0;
+		padding: 3px 5px;
+	}
+	#videoImageGallery{
+		width:90%; 
+		margin:0 auto;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.race-box{
+		width:90%; 
+		margin:0 auto;
+		overflow: hidden;
+	}
+	#videoImageGallery{
+		width:90%; 
+		margin:0 auto;
+	}
+}
+
+/*Hook css*/
+ul {
+	list-style: none;
+	margin: 0 !important;
+	padding: 0;
+}	
+.header-right{
+	bottom: 0 !important;
+	right: 60px !important;
+	margin-right: 10px;
+}
+.header-right .lexicon-icon{font-size:20px;}
+.sub_mobile_menu .slicknav_icon{
+	top: -15px;
+	right: 0;
+	margin-right: 0;
+}
+.register{
+	font-size:14px;
+	border: solid 1px #fff;
+	padding: 5px 15px;
+}
+.register a{
+	color:#fff;
+	font-family: 'Roboto Condensed';
+	font-weight: 700;
+	font-style: italic;
+	letter-spacing: 2px;
+}
+.register a:hover{
+	color: #ff8401;
+}
+#footer {
+    background: linear-gradient(to bottom, rgba(74, 71, 71, 0.9) 0%,rgba(0, 0, 0, 0.8)100%),url(/o/halongTheme/images/bg_footer.jpg) center no-repeat;
+    background-size: cover;
+    height: 15vw;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+	position: relative;
+}
+.footer-info{
+	width: 416px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	text-align: center;
+}
+h3.logo-text{
+	color: #FF8401;
+    text-transform: uppercase;
+    font-size: 24px;
+    width: 200px;
+    margin: 0 auto;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-style: italic;
+    line-height: 26px;
+    margin-bottom: 25px;
+}
+p.copyright{
+	color: #fff;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 26px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.page-editor__sidebar{
+	top: 110px !important;
+}
+.portlet {
+    margin-bottom: 0;
+    position: inherit;
+}
+.ddm-form-name{
+	padding: 40px 0 0 10px !important;
+}
+.lfr-ddm-form-pagination-controls{
+	padding-top: 0 !important;
+}
+#ddm-form-submit{
+	margin-right: 10px !important;
+}
+.pl-4{
+	padding-left: 0 !important;
+}
+.pr-4{
+	padding-right: 0 !important;
+}
+.pb-4{
+	padding-bottom:0 !important;
+}
+.container-fluid{
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+.taglib-icon-label{
+	display: none;
+}
+.slicknav_nav{
+	background-color: #000;
+	opacity: 0.8;
+}
+.close{
+	padding: 0;
+	display: block;
+}
+.sub-portal-header{
+	width: 100%; 
+	z-index: 100;
+	background-size: cover;
+}
+H3 .title-link {
+    font-size: 15px;
+}
+.language-bar .btn-monospaced{
+	width: 22px;
+	height: 20px;
+	padding-top: 0;
+	border: 0;
+	border-radius: 0;
+}
+.language-bar .btn-secondary{
+	background-color: transparent;
+	border:0;
+}
+.language-bar span{
+	padding:0 !important;
+}
+.language-bar a{
+	font-family:'Roboto Condensed';
+	font-size: 16px;
+	font-weight:bold;
+	font-style:italic;
+	color:#000;
+}
+.taglib-text-icon{
+    font-size: 11px;
+}
+.asset-full-content{
+	overflow:hidden;
+}
+@media only screen and (min-width: 360px) and (max-width: 740px) {
+  #footer{
+  	height: 55vw;
+  }
+  p.copyright {
+    font-size: 14px;
+	width: 200px;
+	margin: 0 auto;
+  }
+  .footer-info {
+		width: auto;
+	}
+}
+@media only screen and (min-width: 414px) and (max-width: 736px) {
+	#footer {
+		height: 55vw;
+	}
+	p.copyright {
+		font-size: 14px;
+		width: 200px;
+		margin: 0 auto;
+	}
+	.footer-info {
+		width: auto;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	h3.logo-text {
+	    margin-bottom: 15px;
+	}
+	p.copyright {
+		font-size: 14px;
+	}
+}
