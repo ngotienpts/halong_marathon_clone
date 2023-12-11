@@ -1,0 +1,51 @@
+span.icon {
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: normal;
+}
+
+span.icon::before {
+    content: " ";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 16px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+span.icon.icon-lg::before {
+    width: 32px;
+    height: 32px;
+}
+
+span.icon-time::before {
+    background-image: url("../images/clock-icon.png");
+}
+
+span.icon-location::before {
+    background-image: url("../images/pin-icon.png");
+}
+
+span.icon-distance::before {
+    background-image: url("../images/distance-icon.png");
+}
+
+span.icon-file::before {
+    background-image: url("../images/file-icon.png");
+}
+
+span.icon-ticket::before {
+    background-image: url("../images/ticket-icon.png");
+}
+
+span.icon-wallet::before {
+    background-image: url("../images/wallet-icon.png");
+}
+
+span.icon-chart::before {
+    background-image: url("../images/chart-bar-icon.png");
+}

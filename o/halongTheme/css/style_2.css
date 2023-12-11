@@ -1,0 +1,86 @@
+#signinmodal.modal-dialog {
+    overflow: hidden !important;
+}
+.page-editor__sidebar {
+    top: 120px !important;
+}
+.taglib-captcha {
+    float: right !important;
+    width: 50% !important;
+    margin: 0 !important;
+}
+/*Fix album gallery*/
+.yui3-widget-mask.image-viewer-mask {
+    background-color: black;
+}
+.lfr-asset-description {
+    margin-bottom: 30px;
+}
+.lfr-asset-metadata {
+    display: none;
+}
+.taglib-header .header-title {
+    white-space: normal !important;
+    font-size: 20px;
+}
+/*Fix pagination*/
+ul.pagination li {
+    margin: 0 10px;
+}
+/* ------------------------------------------------------------------- */
+.register-primary {
+    background-color: #f6f6f6;
+}
+.auth-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.auth-wrapper .container > .row {
+    justify-content: center;
+}
+.auth-wrapper .container {
+    overflow: hidden;
+    padding: 0;
+}
+.auth-form,
+.my-profile-container {
+    font-size: 16px;
+    font-family: "Gilroy", Roboto, sans-serif;
+    font-weight: 500;
+}
+.auth-wrapper .container ul.nav {
+    display: flex;
+    margin-bottom: 20px !important;
+}
+
+.input-icon .icon-posi {
+    position: absolute;
+    right: 12px;
+    top: 12.5px;
+    color: #685c89;
+    margin: 0;
+    width: 12px;
+    height: auto;
+    font-size: 12px;
+}
+
+.text-blue-337 {
+    color: #337ab7;
+}
+
+.pane-item {
+    display: none;
+}
+.pane-item.active {
+    display: block;
+}
+.un-pointer {
+    cursor: unset !important;
+}
+.hover-normal:hover::before {
+    content: none !important;
+}
+
+.show-pass {
+    display: none;
+}

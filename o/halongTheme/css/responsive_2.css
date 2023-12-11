@@ -1,0 +1,102 @@
+@media only screen and (min-width: 360px) and (max-width: 740px) {
+    .taglib-captcha {
+        float: none !important;
+        width: auto !important;
+        margin: 0 !important;
+    }
+    #menu-header .logo img {
+        width: 65px;
+    }
+    #sub-menu-header .logo img {
+        width: 35vw !important;
+    }
+    #sub-menu-header .logo {
+        padding: 0;
+    }
+    .taglib-header .header-title {
+        max-width: 90% !important;
+    }
+    ul.pagination {
+        margin-top: 10px !important;
+    }
+    .taglib-page-iterator .lfr-pagination-buttons > li {
+        width: 40% !important;
+    }
+    .mobile_menu .slicknav_menu .slicknav_btn {
+        top: -28px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #menu-header .slicknav_btn {
+        top: -35px !important ;
+    }
+    #sub-menu-header .slicknav_btn {
+        top: -35px !important ;
+    }
+    #sub-menu-header .logo {
+        padding: 0;
+    }
+    ul.pagination {
+        margin-top: 10px !important;
+    }
+    .taglib-page-iterator .lfr-pagination-buttons > li {
+        width: 45% !important;
+    }
+    .mobile_menu .slicknav_menu .slicknav_btn {
+        top: -36px;
+    }
+    #sub-menu-header .slicknav_btn {
+        top: -36px !important;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #sub-menu-header .logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #sub-menu-header .logo img {
+        width: 150px;
+    }
+    .header-area .main-header .menu-wrapper .main-menu ul#sub-navigation li a {
+        margin: 0 5px;
+        font-size: 14px;
+        padding: 0;
+    }
+    .register {
+        padding: 5px 10px;
+    }
+}
+@media only screen and (min-width: 720px) and (max-width: 1280px) and (orientation: landscape) {
+    #sub-menu-header .logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #sub-menu-header .logo img {
+        width: 150px;
+    }
+    .header-area .main-header .menu-wrapper .main-menu ul#sub-navigation li a {
+        margin: 0 9px;
+        font-size: 15px;
+        padding: 0;
+    }
+    .register {
+        padding: 5px 10px;
+    }
+}
+@media only screen and (min-width: 1080px) and (max-width: 2048px) and (orientation: portrait) {
+    #sub-menu-header .logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #sub-menu-header .logo img {
+        width: 150px;
+    }
+    .header-area .main-header .menu-wrapper .main-menu ul#sub-navigation li a {
+        margin: 0 15px;
+        font-size: 16px;
+        padding: 0;
+    }
+    .register {
+        padding: 5px 10px;
+    }
+}
