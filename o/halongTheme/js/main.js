@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
         ".js__showPassContainer"
     );
 
+    const modal = document.querySelector(".js__modal");
+    const showModal = document.querySelector(".js__showModal");
+    const closeModal = document.querySelector(".js__closeModal");
+    //
+    const numberInputs = document.querySelectorAll(".js__numberInput");
+
     function switchTab(tabId, idOne, idTwo) {
         document.getElementById(tabId).classList.add("active");
         document
@@ -60,6 +66,33 @@ document.addEventListener("DOMContentLoaded", function () {
                             input.setAttribute("type", "password");
                         }
                     };
+                });
+            }
+
+            // show modal
+            if (showModal) {
+                showModal.onclick = function () {
+                    if (modal) {
+                        modal.classList.add("active");
+                    }
+                    document.querySelector("body").style.overflow = "hidden";
+                };
+            }
+            if (closeModal) {
+                closeModal.onclick = function () {
+                    if (modal) {
+                        modal.classList.remove("active");
+                    }
+                    document.querySelector("body").style.overflow = "auto";
+                };
+            }
+
+            //
+            if (numberInputs) {
+                numberInputs.forEach((numberInput, index) => {
+                    var increment = numberInput.querySelector(".js__increment");
+                    var decrement = numberInput.querySelector(".js__decrement");
+                    var counter = numberInput.querySelector(".js__counter");
                 });
             }
 

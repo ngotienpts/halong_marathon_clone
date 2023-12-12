@@ -104,7 +104,6 @@
             type="text/css"
         />
         <link rel="stylesheet" href="./o/halongTheme/css/login.css" />
-        <link rel="stylesheet" href="./o/halongTheme/css/my-profile.css" />
         <link rel="stylesheet" href="./o/halongTheme/css/style_2.css" />
         <link rel="stylesheet" href="./o/halongTheme/css/responsive_2.css" />
     </head>
@@ -413,9 +412,8 @@
                                             <div
                                                 class="user-avatar"
                                                 style="
-                                                    background-image: url(https://lh3.googleusercontent.com/a/ACg8ocLzyyOEjIfxAe4BZWmApbJKIGk-c4i9dE676s444qCheg=s96-c);
+                                                    background-image: url(https://buffer.com/library/content/images/2023/10/free-images.jpg);
                                                 "
-                                                ng-hide="ctrl.user.avatar"
                                             >
                                                 <input
                                                     type="file"
@@ -460,7 +458,7 @@
                                         <div class="user-menu">
                                             <div class="row l-wrap">
                                                 <a
-                                                    class="col-12 col-md-12 col-xs-4 col-sm-4 active"
+                                                    class="col-12 col-md-12 col-xs-4 col-sm-4"
                                                     href="/users/my-profile/userinfo"
                                                     ><div>
                                                         <i
@@ -478,7 +476,7 @@
                                                         >Vé đã đặt
                                                     </div></a
                                                 ><a
-                                                    class="col-12 col-md-12 col-sm-4 col-xs-4"
+                                                    class="col-12 col-md-12 col-sm-4 col-xs-4 active"
                                                     href="/users/my-profile/groups"
                                                     ><div>
                                                         <i
@@ -492,77 +490,147 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-9 col-xs-12 col-sm-12"><div class="profile-container profile-detail-container"><div class="profile-groups ng-scope" ng-controller="GroupController as ctrl"><div class="tabs ng-isolate-scope" active="ctrl.myGroupTab" justified="true" ng-show="ctrl.initialized">
-                                <ul class="nav nav-tabs nav-justified" ng-class="{'nav-stacked': vertical, 'nav-justified': justified}" ng-transclude=""><li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item ng-scope ng-isolate-scope active" index="0" select="ctrl.myGroupTab = 0">
-                                <a href="" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude=""><uib-tab-heading class="ng-scope"><i class="fa fa-ticket-alt"></i> <span>Nhóm đang tham gia</span></uib-tab-heading></a>
-                              </li><li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item ng-scope ng-isolate-scope" index="1" select="ctrl.myGroupTab = 1">
-                                <a href="" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude=""><uib-tab-heading class="ng-scope"><i class="fa fa-check"></i> <span>Nhóm đã tạo</span></uib-tab-heading></a>
-                              </li></ul>
-                                <div class="tab-content">
-                                  <!-- ngRepeat: tab in tabset.tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
-                                  <div class="text-center ng-scope"><p class="alert alert-info bg-info">Danh sách nhóm trống!</p></div></div><!-- end ngRepeat: tab in tabset.tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
-                                  <div class="ng-hide ng-scope" ng-show="ctrl.myGroupTab == 1"><div class="text-center"><p class="alert alert-info bg-info">Danh sách nhóm trống!</p></div></div></div><!-- end ngRepeat: tab in tabset.tabs -->
-                                </div>
-                              </div></div><script type="text/ng-template" id="attendeeDetailMd"><div class="modal-header row space">
+                            <div class="col-md-9 col-xs-12 col-sm-12">
+                                <div
+                                    class="profile-container profile-detail-container"
+                                >
+                                    <div class="profile-groups ng-scope">
+                                        <div class="tabs ng-isolate-scope">
+                                            <ul
+                                                class="nav nav-tabs nav-justified"
+                                            >
+                                                <li
+                                                    class="uib-tab nav-item ng-scope ng-isolate-scope active"
+                                                    id="tab-1"
+                                                >
+                                                    <a
+                                                        class="nav-link ng-binding"
+                                                    >
+                                                        <uib-tab-heading class="ng-scope">
+                                                            <i
+                                                                class="fa fa-ticket-alt"
+                                                            ></i>
+                                                            <span
+                                                                >Nhóm đang tham
+                                                                gia</span
+                                                            >
+                                                        </uib-tab-heading>
+                                                    </a>
+                                                </li>
+                                                <li
+                                                    class="uib-tab nav-item ng-scope ng-isolate-scope"
+                                                    id="tab-2"
+                                                >
+                                                    <a
+                                                        class="nav-link ng-binding"
+                                                    >
+                                                        <uib-tab-heading class="ng-scope">
+                                                            <i
+                                                                class="fa fa-check"
+                                                            ></i>
+                                                            <span
+                                                                >Nhóm đã
+                                                                tạo</span
+                                                            >
+                                                        </uib-tab-heading>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div
+                                                    class="tab-pane ng-scope active"
+                                                    id="pane-1"
+                                                >
+                                                    <div
+                                                        class="text-center ng-scope"
+                                                    >
+                                                        <p
+                                                            class="alert alert-info bg-info"
+                                                        >
+                                                            Danh sách nhóm
+                                                            trống!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="tab-pane ng-scope"
+                                                    id="pane-2"
+                                                >
+                                                    <div
+                                                        class="text-center ng-scope"
+                                                    >
+                                                        <div
+                                                            class="text-center"
+                                                        >
+                                                            <p
+                                                                class="alert alert-info bg-info"
+                                                            >
+                                                                Danh sách nhóm
+                                                                trống!
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script
+                                        type="text/ng-template"
+                                        id="attendeeDetailMd"
+                                    >
+                                            <div class="modal-header row space">
                                                 <h4 class="modal-title">Người tham gia</h4>
                                                 <div class="btnClose fas fa-times" ng-click="ctrl.close()"></div>
-                                              </div>
-                                              <div class="modal-body">
-                                                <div ng-if="!!ctrl.attendee.qr">
-                                                  <p>
-                                                    Mã QR check-in tại sự kiện
-                                                    <br>
-                                                    <img ng-src="{{ctrl.attendee.qr}}" width="150"/>
-                                                  </p>
-                                                  <hr>
-                                                </div>
-                                                <p>
-                                                  Mã vé:
-                                                  <strong ng-bind="ctrl.attendee.code"></strong>
-                                                </p>
-                                              
-                                                <div class="row">
-                                                  <div class="col-sm-6 col-xs-12">
-                                                    <p>Họ và tên: <strong ng-bind="ctrl.attendee.fullName"></strong> </p>
-                                                    <p>Cự ly: <strong ng-bind="ctrl.attendee.option.name"></strong> </p>
-                                                    <p ng-show="ctrl.attendee.team">CLB/Đội nhóm: <strong ng-bind="ctrl.attendee.team.name"></strong> </p>
-                                                    <p>Tên trên BIB: <strong ng-bind="ctrl.attendee.nameOnBib"></strong> </p>
-                                                    <p>Cỡ áo: <strong ng-bind="ctrl.attendee.tshirtSize"></strong> </p>
-                                                    <p>Giới tính: <strong ng-bind="ctrl.attendee.gender"></strong> </p>
-                                                    <p>Quốc tịch: <strong ng-bind="ctrl.attendee.nationality"></strong> </p>
-                                                  </div>
-                                              
-                                                  <div class="col-sm-6 col-xs-12">
-                                                    <p>Số điện thoại: <strong ng-bind="ctrl.attendee.phone"></strong> </p>
-                                                    <p>Email: <strong ng-bind="ctrl.attendee.email"></strong> </p>
-                                                    <p>CMND/CCCD/Hộ chiếu: <strong ng-bind="ctrl.attendee.identityId"></strong> </p>
-                                                    <p>Tên người liên lạc khẩn cấp: <strong ng-bind="ctrl.attendee.emerContactName"></strong> </p>
-                                                    <p>SĐT người liên lạc khẩn cấp: <strong ng-bind="ctrl.attendee.emerContactPhone"></strong> </p>
-                                                    <p>Nhóm máu: <strong ng-bind="ctrl.attendee.blood"></strong> </p>
-                                                    <p>Thông tin y tế: <strong ng-bind="ctrl.attendee.medicalNote"></strong> </p>
-                                              
-                                                    <p ng-if="ctrl.attendee.moreInfos" 
-                                                      ng-repeat="(field, value) in ctrl.attendee.moreInfos">
-                                                      <span ng-bind="field"></span>:
-                                                      <strong ng-bind="value"></strong>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <p>Mã QR check-in tại sự kiện<br>
+                                                        <img ng-src="{{ctrl.attendee.qr}}" width="150"/>
                                                     </p>
-                                                  </div>
+                                                    <hr>
                                                 </div>
-                                              
-                                                <p ng-if="ctrl.attendee.showEwaiverInfo">
-                                                  <a ng-href="/e-waiver/{{ctrl.attendee.id}}" target="_blank" class="btn btn-default secondary" ng-if="!ctrl.attendee.isSignedEwaiver">
-                                                    Chưa ký miễn trừ trách nhiệm
-                                                    &nbsp;
+                                                <p>Mã vé:<strong ng-bind="ctrl.attendee.code"></strong></p>
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-xs-12">
+                                                    <p>Họ và tên: <strong></strong> </p>
+                                                    <p>Cự ly: <strong></strong></p>
+                                                    <p>CLB/Đội nhóm: <strong></strong></p>
+                                                    <p>Tên trên BIB: <strong></strong></p>
+                                                    <p>Cỡ áo: <strong></strong> </p>
+                                                    <p>Giới tính: <strong></strong></p>
+                                                    <p>Quốc tịch: <strong></strong></p>
+                                                </div>
+
+                                                <div class="col-sm-6 col-xs-12">
+                                                    <p>Số điện thoại: <strong></strong></p>
+                                                    <p>Email: <strong></strong></p>
+                                                    <p>CMND/CCCD/Hộ chiếu: <strong></strong></p>
+                                                    <p>Tên người liên lạc khẩn cấp: <strong></strong></p>
+                                                    <p>SĐT người liên lạc khẩn cấp: <strong></strong></p>
+                                                    <p>Nhóm máu: <strong></strong></p>
+                                                    <p>Thông tin y tế: <strong></strong></p>
+                                                    <p>
+                                                        <span></span>:
+                                                        <strong></strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <p>
+                                                <a ng-href="/e-waiver/{{ctrl.attendee.id}}" target="_blank" class="btn btn-default secondary">
+                                                    Chưa ký miễn trừ trách nhiệm &nbsp;
                                                     <i class="fa fa-arrow-circle-right"></i>
-                                                  </a>
-                                              
-                                                  <a ng-href="/e-waiver/{{ctrl.attendee.id}}" target="_blank" class="btn btn-default green" ng-if="ctrl.attendee.isSignedEwaiver">
+                                                </a>
+
+                                                <a ng-href="/e-waiver/{{ctrl.attendee.id}}" target="_blank" class="btn btn-default green">
                                                     <i class="fa fa-check-circle"></i>
                                                     Đã ký miễn trừ trách nhiệm
-                                                  </a>
-                                                </p>
-                                                
-                                              </div></script></div></div>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </script>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -608,5 +676,6 @@
         <script src="o/halongTheme/js/unite/ug-lightbox.js"></script>
         <script src="o/halongTheme/js/unite/ug-carousel.js"></script>
         <script src="o/halongTheme/js/unite/ug-api.js"></script>
+        <script src="o/halongTheme/js/main.js"></script>
     </body>
 </html>

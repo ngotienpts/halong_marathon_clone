@@ -20357,7 +20357,8 @@
                 font-size: 18px
             }
 
-            .user-profile .user-menu a i {
+            .user-profile .user-menu a i,
+            .user-profile .user-menu a svg {
                 margin-right: 10px
             }
 

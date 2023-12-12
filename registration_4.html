@@ -424,7 +424,7 @@
                                     class="step-divider step-divider_down"
                                 ></span>
                                 <div
-                                    class="step-info"
+                                    class="step-info active"
                                 >
                                     <span class="icon icon-file"></span> Người
                                     mua
@@ -433,7 +433,7 @@
                                     class="step-divider step-divider_up"
                                 ></span>
                                 <div
-                                    class="step-info"
+                                    class="step-info active"
                                 >
                                     <span class="icon icon-file"></span> Người
                                     tham gia
@@ -442,7 +442,7 @@
                                     class="step-divider step-divider_up"
                                 ></span>
                                 <div
-                                    class="step-info"
+                                    class="step-info active"
                                 >
                                     <span class="icon icon-wallet"></span> Thanh
                                     toán
@@ -452,97 +452,161 @@
                     </div>
                     <div class="container margin-t">
                         
-                        <!-- chon ve -->
+                        <!-- thanh toan -->
                         <div class="ng-scope">
-                            <div class="ticket-step">
-                                <form name="ticketForm" novalidate="" class="ng-pristine ng-valid">
-                                    <div class="tickets-table">
-                                        <table>
-                                            <thead class="ticket-header">
-                                                <tr class="ticket-row">
-                                                    <td class="th-category">
-                                                        <label>Cự ly</label><br>
-                                                    </td>
-                                                    <td class="th-ticket">
-                                                        <label>
-                                                            <span class="icon icon-ticket"></span> Giá
-                                                        </label>
-                                                    </td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="ticket-row">
-                                                    <td class="text-center">
-                                                        <label>KIDS RUN</label><br>
-                                                        <span class="text-small">TỪ 05 ĐẾN 13 TUỔI</span><br>
-                                                        <number-input class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty">
-                                                            <div class="number-input js__numberInput">
-                                                                <span class="decr js__decrement">-</span>
-                                                                <span class="input-placeholder ng-binding js__counter">0</span>
-                                                                <span class="incr js__increment">+</span>
-                                                            </div>
-                                                        </number-input>
-                                                    </td>
-                                                    <td>
-                                                        <label>0 VND</label>
-                                                    </td>
-                                                </tr>
-                                                <tr class="ticket-row">
-                                                    <td class="text-center">
-                                                        <label>5KM</label><br>
-                                                        <span class="text-small">TỪ 14 TUỔI TRỞ LÊN</span><br>
-                                                        <number-input class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty">
-                                                            <div class="number-input">
-                                                            <span class="decr">-</span>
-                                                            <span class="input-placeholder ng-binding">0</span>
-                                                            <span class="incr">+</span>
-                                                            </div>
-                                                        </number-input>
-                                                    </td>
-                                                    <td>
-                                                        <label>250,000 VND</label>
-                                                    </td>
-                                                </tr>
-                                                <tr class="ticket-row">
-                                                    <td class="text-center">
-                                                        <label>10KM</label><br>
-                                                        <span class="text-small">TỪ 14 TUỔI TRỞ LÊN</span><br>
-                                                        <number-input class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty">
-                                                            <div class="number-input">
-                                                            <span class="decr">-</span>
-                                                            <span class="input-placeholder ng-binding">0</span>
-                                                            <span class="incr">+</span>
-                                                            </div>
-                                                        </number-input>
-                                                    </td>
-                                                    <td>
-                                                        <label>350,000 VND</label>
-                                                    </td>
-                                                </tr>
-                                                <tr class="ticket-row">
-                                                    <td class="text-center"><label>21KM</label><br>
-                                                        <span class="text-small">TỪ 16 TUỔI TRỞ LÊN</span><br>
-                                                        <number-input class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty">
-                                                            <div class="number-input">
-                                                            <span class="decr">-</span>
-                                                            <span class="input-placeholder ng-binding">0</span>
-                                                            <span class="incr">+</span>
-                                                            </div>
-                                                        </number-input>
-                                                    </td>
-                                                    <td>
-                                                        <label>450,000 VND</label>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                            <div class="pay-step">
+                                <form name="payForm" novalidate="" class="ng-dirty ng-valid-parse ng-valid ng-valid-required">
+                                    <div class="row">
+                                        <div class="col-md-8 col-sm-12 col-xs-12">
+                                            <div class="block-content">
+                                                <p class="text-bold text-bigger">
+                                                    Chọn phương thức thanh toán
+                                                </p>
+                                                <div class="form-group pay-container">
+                                                    <label class="radio-container">
+                                                        <img
+                                                            src="./o/halongTheme/images/atmcard.png"
+                                                            style="border-radius: 4px;" />
+                                                        <strong>Thanh toán qua thẻ ATM nội địa</strong>
+                                                        <input type="radio" value="ATMCard" name="payBank" required="" class="ng-pristine ng-untouched ng-not-empty ng-valid ng-valid-required" />
+                                                        <span class="radiobtn"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group pay-container">
+                                                    <label class="radio-container">
+                                                        <img src="./o/halongTheme/images/creditcard.png" style="border-radius: 4px;" />
+                                                        <strong>Thanh toán qua thẻ tín dụng, ghi nợ (Visa/Master/JCB)</strong>
+                                                        <input type="radio" value="CreditCard" name="payBank" required="" class="ng-pristine ng-untouched ng-not-empty ng-valid ng-valid-required" />
+                                                        <span class="radiobtn"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group pay-container">
+                                                    <label class="radio-container">
+                                                        <img src="../o/halongTheme/images/zalopay.png" style="border-radius: 4px;" />
+                                                        <strong>Thanh toán qua ví ZaloPay</strong>
+                                                        <input
+                                                            type="radio"
+                                                            ng-model="ctrl.joinInfo.paymentType"
+                                                            value="ZALOPAY"
+                                                            name="payBank"
+                                                            required=""
+                                                            class="ng-pristine ng-untouched ng-not-empty ng-valid ng-valid-required" />
+                                                        <span class="radiobtn"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group pay-container">
+                                                    <label class="radio-container">
+                                                        <img src="./o/halongTheme/images/qr.png" style="border-radius: 4px;" />
+                                                        <strong>Chuyển khoản bằng quét QR</strong>
+                                                        <input
+                                                            type="radio"
+                                                            ng-model="ctrl.joinInfo.paymentType"
+                                                            value="QR"
+                                                            name="payBank"
+                                                            required=""
+                                                            class="ng-pristine ng-untouched ng-not-empty ng-valid ng-valid-required" />
+                                                        <span class="radiobtn"></span>
+                                                    </label>
+                                                    <div class="payment-help ng-hide">
+                                                        Quét Mã QR từ ứng dụng
+                                                        ngân hàng và ví điện tử
+                                                        khác<br />
+                                                        <img src="./o/halongTheme/images/qr_list.png" height="100px"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group pay-container active">
+                                                    <label class="radio-container">
+                                                        <img src="./o/halongTheme/images/installment.png" style="border-radius: 4px;" />
+                                                        <strong>Thanh toán trả góp</strong>
+                                                        <input
+                                                            type="radio"
+                                                            ng-model="ctrl.joinInfo.paymentType"
+                                                            value="Installment"
+                                                            name="payBank"
+                                                            required=""
+                                                            class="ng-untouched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" />
+                                                        <span class="radiobtn"></span>
+                                                    </label>
+                                                    <div class="payment-help">
+                                                        Phí trả góp 3%<br />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group pay-container">
+                                                    <label class="radio-container">
+                                                        <img src="./o/halongTheme/images/bank.png"style="border-radius: 4px;" />
+                                                        <strong>Chuyển khoản qua ngân hàng</strong>
+                                                        <input
+                                                            type="radio"
+                                                            ng-model="ctrl.joinInfo.paymentType"
+                                                            value="Bank"
+                                                            name="payBank"
+                                                            required=""
+                                                            class="ng-pristine ng-untouched ng-not-empty ng-valid ng-valid-required" />
+                                                        <span class="radiobtn"></span>
+                                                    </label>
+                                                    <div class="bank-info ng-hide">
+                                                        <p> Cú pháp chuyển khoản:
+                                                            <i>Mã đơn hàng_Họ tên_Số điện thoại</i>
+                                                        </p>
+                                                        <p>
+                                                            <img
+                                                                src="https://timve365.vn/uploads/f_64010e22d88ad94fff925b43/asia-commercial-bank-logo-svg-2023861142.png"
+                                                                width="122"
+                                                                height="48"
+                                                            />
+                                                        </p>
+                                                        <p>
+                                                            Ngân hàng Thương Mại
+                                                            Cổ Phần Á Châu<br />
+                                                            <strong>Lê Thị Trà Châu</strong><br />STK:
+                                                            <strong>200849559</strong><br />Chi nhánh:
+                                                            <strong>Lê Đại Hành</strong>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12 col-xs-12">
+                                            <div class="block-content order-detail">
+                                                <p class="text-bold text-bigger">
+                                                    Đơn hàng
+                                                </p>
+                                                <div class="row ng-scope">
+                                                    <div class="col-flex">
+                                                        <span>
+                                                            <span class="text-bold text-info ng-binding">1 x KIDS RUN</span>
+                                                            <span class="text-bold text-info ng-binding"></span>
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="ng-binding">0đ</span>
+                                                    </div>
+                                                </div>
+                                                <p class="text-small text-danger">
+                                                    Giá vé bao gồm thuế VAT
+                                                </p>
+                                                <hr />
+                                                <div class="row">
+                                                    <strong class="col-flex">Tổng cộng</strong>
+                                                    <strong class="ng-binding">0đ</strong>
+                                                </div>
+                                                <hr />
+                                                <div class="row">
+                                                    <strong class="col-flex">Giảm giá</strong>
+                                                    <strong class="ng-binding">0đ</strong>
+                                                </div>
+                                                <hr />
+                                                <div class="row">
+                                                    <strong class="col-flex">Số tiền thanh toán</strong>
+                                                    <strong class="text-secondary text-bigger ng-binding">0đ</strong>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <!-- endchon ve -->
-
-                       
+                        <!-- end thanh toan -->
                     </div>
                     <div class="form-bottom">
                         <div class="container">
@@ -552,13 +616,12 @@
                             ></p>
 
                             <div>
-                                <div class="total-price ng-scope">
-                                    <label>Tổng tiền:</label> 
-                                    <span>
-                                        <span class="ng-binding">0</span> 
-                                        VND
-                                    </span>
-                                </div>
+                                <button
+                                    class="btn btn-large btn-outline blue"
+                                    style="margin-right: 50px"
+                                >
+                                    Quay lại
+                                </button>
                                 <button
                                     class="btn btn-large"
                                 >

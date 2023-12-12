@@ -104,7 +104,6 @@
             type="text/css"
         />
         <link rel="stylesheet" href="./o/halongTheme/css/login.css" />
-        <link rel="stylesheet" href="./o/halongTheme/css/my-profile.css" />
         <link rel="stylesheet" href="./o/halongTheme/css/style_2.css" />
         <link rel="stylesheet" href="./o/halongTheme/css/responsive_2.css" />
     </head>
@@ -413,9 +412,8 @@
                                             <div
                                                 class="user-avatar"
                                                 style="
-                                                    background-image: url(https://lh3.googleusercontent.com/a/ACg8ocLzyyOEjIfxAe4BZWmApbJKIGk-c4i9dE676s444qCheg=s96-c);
+                                                    background-image: url(https://buffer.com/library/content/images/2023/10/free-images.jpg);
                                                 "
-                                                ng-hide="ctrl.user.avatar"
                                             >
                                                 <input
                                                     type="file"
@@ -460,7 +458,7 @@
                                         <div class="user-menu">
                                             <div class="row l-wrap">
                                                 <a
-                                                    class="col-12 col-md-12 col-xs-4 col-sm-4 active"
+                                                    class="col-12 col-md-12 col-xs-4 col-sm-4"
                                                     href="/users/my-profile/userinfo"
                                                     ><div>
                                                         <i
@@ -469,7 +467,7 @@
                                                         >Thông tin cá nhân
                                                     </div></a
                                                 ><a
-                                                    class="col-12 col-md-12 col-sm-4 col-xs-4"
+                                                    class="col-12 col-md-12 col-sm-4 col-xs-4 active"
                                                     href="/users/my-profile/orders"
                                                     ><div>
                                                         <i
@@ -492,18 +490,64 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-9 col-xs-12 col-sm-12"><div class="profile-container profile-detail-container"><div ng-controller="OrderController as ctrl" class="profile-groups ng-scope"><div class="tabs ng-isolate-scope" active="ctrl.myOrderTab" justified="true" ng-show="ctrl.initialized">
-                                <ul class="nav nav-tabs nav-justified" ng-class="{'nav-stacked': vertical, 'nav-justified': justified}" ng-transclude=""><li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item ng-scope ng-isolate-scope active" index="0" select="ctrl.myOrderTab = 0">
-                                <a href="" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude=""><uib-tab-heading class="ng-scope"><i class="fa fa-ticket-alt"></i> <span>Đăng ký cá nhân</span></uib-tab-heading></a>
-                              </li><li ng-class="[{active: active, disabled: disabled}, classes]" class="uib-tab nav-item ng-scope ng-isolate-scope" index="1" select="ctrl.myOrderTab = 1">
-                                <a href="" ng-click="select($event)" class="nav-link ng-binding" uib-tab-heading-transclude=""><uib-tab-heading class="ng-scope"><i class="fa fa-calendar-check"></i> <span>Vé giữ chỗ</span></uib-tab-heading></a>
-                              </li></ul>
-                                <div class="tab-content">
-                                  <!-- ngRepeat: tab in tabset.tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
-                                  <div class="order-wrapper ng-scope"><div class="form-group" style="width: 200px;"><select class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="ctrl.orderFilter" ng-change="ctrl.filter()"><option value="" selected="selected">Tất cả</option><option value="1">Chờ Thanh Toán</option><option value="2">Đã Thanh Toán</option><option value="5">Đã huỷ</option></select></div><div class=""><p class="text-alert bg-info">Bạn chưa có đơn hàng nào</p></div></div></div><!-- end ngRepeat: tab in tabset.tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabset.tabs" ng-class="{active: tabset.active === tab.index}" uib-tab-content-transclude="tab">
-                                  <div class="order-wrapper ng-scope"><div class="form-group" style="width: 200px;"><select class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="ctrl.orderFilter" ng-change="ctrl.filter()"><option value="" selected="selected">Tất cả</option><option value="1">Chờ Thanh Toán</option><option value="2">Đã Thanh Toán</option><option value="5">Đã huỷ</option></select></div><div class=""><p class="text-alert bg-info">Bạn chưa có đơn hàng nào</p></div></div></div><!-- end ngRepeat: tab in tabset.tabs -->
+                            <div class="col-md-9 col-xs-12 col-sm-12">
+                                <div class="profile-container profile-detail-container">
+                                    <div ng-controller="OrderController as ctrl" class="profile-groups ng-scope">
+                                        <div class="tabs ng-isolate-scope">
+                                            <ul class="nav nav-tabs nav-justified">
+                                                <li class="uib-tab nav-item ng-scope ng-isolate-scope active" id="tab-1">
+                                                    <a class="nav-link ng-binding">
+                                                        <uib-tab-heading class="ng-scope">
+                                                            <i class="fa fa-ticket-alt"></i> 
+                                                            <span>Đăng ký cá nhân</span>
+                                                        </uib-tab-heading>
+                                                    </a>
+                                                </li>
+                                                <li class="uib-tab nav-item ng-scope ng-isolate-scope" id="tab-2">
+                                                    <a class="nav-link ng-binding" >
+                                                        <uib-tab-heading class="ng-scope">
+                                                            <i class="fa fa-calendar-check"></i> 
+                                                            <span>Vé giữ chỗ</span>
+                                                        </uib-tab-heading>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane ng-scope active" id="pane-1">
+                                                    <div class="order-wrapper ng-scope">
+                                                        <div class="form-group" style="width: 200px;">
+                                                            <select class="form-control ng-pristine ng-untouched ng-valid ng-empty">
+                                                                <option value="" selected="selected">Tất cả</option>
+                                                                <option value="1">Chờ Thanh Toán</option>
+                                                                <option value="2">Đã Thanh Toán</option>
+                                                                <option value="5">Đã huỷ</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="">
+                                                            <p class="text-alert bg-info">Bạn chưa có đơn hàng nào</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane ng-scope" id="pane-2">
+                                                    <div class="order-wrapper ng-scope">
+                                                        <div class="form-group" style="width: 200px;">
+                                                            <select class="form-control ng-pristine ng-untouched ng-valid ng-empty">
+                                                                <option value="" selected="selected">Tất cả</option>
+                                                                <option value="1">Chờ Thanh Toán</option>
+                                                                <option value="2">Đã Thanh Toán</option>
+                                                                <option value="5">Đã huỷ</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="">
+                                                            <p class="text-alert bg-info">Bạn chưa có đơn hàng nào</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div></div></div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -549,5 +593,6 @@
         <script src="o/halongTheme/js/unite/ug-lightbox.js"></script>
         <script src="o/halongTheme/js/unite/ug-carousel.js"></script>
         <script src="o/halongTheme/js/unite/ug-api.js"></script>
+        <script src="o/halongTheme/js/main.js"></script>
     </body>
 </html>
